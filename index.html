@@ -25,8 +25,9 @@
         margin: 0;
         padding: 0;
         overflow: hidden;
-        background-color: #17191c;
+        background-color: #f8fafd;
         border-radius: 100px;
+        box-shadow: 0 7px 5px #dddddd;
     }
     li.NavBarItems {
         float: left;
@@ -38,7 +39,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        color: white;
+        color: #444746;
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
@@ -50,12 +51,16 @@
         width: 24px;
     }
     li a:hover, .dropdown:hover .dropbtn {
-        background-color: #5a9dff;
+        background-color: #e7e8eb;
         border-radius: 100px;
     }
     .active {
-        background-color: #000000;
+        color: #004a86;
+        background-color: #c2e7ff;
         border-radius: 100px;
+    }
+    .active:hover {
+        background-color: #b5d7ed;
     }
     li.dropdown {
         display: inline-block;
@@ -67,7 +72,7 @@
     .dropdown-content {
         display: none;
         position: absolute;
-        background-color: #3a404a;
+        background-color: #e9eef6;
         min-width: 160px;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         margin: 3px;
@@ -76,7 +81,7 @@
         border-radius: 100px;
     }
     .dropdown-content a {
-        color: white;
+        color: #1e1f20;
         padding: 12px 16px;
         text-decoration: none;
         display: block;
@@ -84,7 +89,7 @@
         border-radius: 50px;
     }
     .dropdown-content a:hover {
-        background-color: #5a9dff;
+        background-color: #dce1e8;
         border-radius: 50px;
     }
     .dropdown:hover .dropdown-content {
@@ -99,7 +104,7 @@
 </head>
 <body>
     <ul class="NavBar">
-        <li class="NavBarItems"><a class="active" href="#"><img src="utils/icons/home_24dp_FFFFFF_FILL1_wght400_GRAD0_opsz24.svg" alt="Home Icon"></a></li>
+        <li class="NavBarItems"><a class="active" href="#"><img style="color: black;" src="utils/icons/home_24dp_004A86_FILL1_wght400_GRAD0_opsz24.svg" alt="Home Icon"></a></li>
         <li class="dropdown">
             <a href="#" class="dropbtn">Lab 1 ▾</a>
             <div class="dropdown-content">
