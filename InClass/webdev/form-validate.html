@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>form pattern validation</title>
+	<style type="text/css">
+	  input:invalid {
+	    border: red solid 4px;
+	  }
+	  input,
+	  input:valid {
+	    background-color: lightgreen;
+	  }
+	</style>
+
+</head>
+<body>
+    <form action="form-echo.php" method="get">
+    <h1>Form pattern attibutes testing</h1>
+    <hr>
+	Slide 31 Example:    
+	<input 
+		type="text" 
+        name="username"
+		placeholder="Username a..z..."
+		pattern="[a-z]{1,15}"
+		title="Username should only contain lowercase letters. e.g. john">
+
+	<h3>1. เป็นสระในภาษาอังกฤษเท่านั้นและมีได้ 3 ตัว</h3>
+	<input 
+			type="text" 
+	        name="vowels"
+			placeholder="3 english only"
+			pattern="[a,e,i,o,u,A,E,I,O,U]{3}"
+	>	
+	<h3>2. ขึ้นต้นด้วยตัวพิมพ์ใหญ่ ที่เหลือเป็นอักษรพิมพ์เล็กตั้งแต่ 1 ตัวขึ้นไป</h3>
+	<input 
+			type="text" 
+	        name="w1"
+			placeholder="Xx..."
+			pattern="[A-Z][a-z]+"
+	>
+	<h3>3. ขึ้นต้นคำด้วย ord หรือ order ลงท้ายด้วยตัวเลข 5 ตัว</h3>
+	<input 
+			type="text" 
+	        name="orderno"
+			placeholder="ord/ordernnnnn"
+			pattern="(ord|order)[0-9]{5}"
+	>
+	<h3>4. เป็นคําว่า frog หรือ blog หรือ clog เท่านั้น</h3>
+	<input 
+			type="text" 
+	        name="fbc"
+			placeholder="frog/blog/clog"
+			pattern="[f,b,c][r,l]og"
+	>
+	<h3>BONUS. เป็นรหัสนักศึกษา cs เท่านั้น</h3>
+	<input 
+			type="text" 
+	        name="cs-std"
+			placeholder="xx-xxxxxx-xxxx-x"
+			pattern="[5-7][0-9]\-040626\-[0-9]{4}\-[0-9]"
+	>
+
+	<p>
+
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>

@@ -18,7 +18,7 @@
 
 <body>
 <?php
-if($_REQUEST || $_FILES) {
+if($_REQUEST || $_FILES) { 
 ?>
 <table>
 <caption>Form Data</caption>
@@ -35,11 +35,11 @@ if($_REQUEST || $_FILES) {
 		$value = stripslashes($value);
 		echo "<tr><td>$key</td><td>$value</td></tr>";
 	}
-
+	
 	foreach($_FILES as $key => $value) {
 		$value = "File (" . $_FILES[$key]['type'] . ")(" . $_FILES[$key]['name'] . ")";
 		echo "<tr>	<td>$key</td><td>$value</td></tr>";
-	}
+	}	
 ?>
 </table>
 

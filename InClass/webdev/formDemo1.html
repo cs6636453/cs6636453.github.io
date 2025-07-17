@@ -3,15 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>Workshop 1</title>
+    <style type="text/css">
+        input:invalid {
+            border: red solid 4px;
+        }
+        input,
+        input:valid {
+            color:green;
+        }
+    </style>
 </head>
 <body>
     <form action="form-echo.php" method="get">
-        USERNAME :
+        Username:
         <input
             type="text"
             name="username"
-            placeholder="Username">
-        <p><label>สาขาวิชา</label>
+            placeholder="Username"
+            pattern="cs[0-9]{7}"
+            title="Username should be cs6xxxxxx only"
+        >
+        <p><label>สาขาวิชา:</label>
 
         <select name="dept">
             <option value="">-- Please choose an option --</option>
@@ -22,6 +34,8 @@
             <option value="AS">AS</option>
             <option value="AFET">AFET</option>
         </select>
+
+        <p>ค่าไฟฟ้า 3 เดือนที่ผ่านมา: <input type="number" name="electric_fee" placeholder="ค่าไฟฟ้า 3 เดือนที่ผ่านมา" step="0.01"></p>
         <p><input type="submit" value="Submit">
     </form>
 </body>
