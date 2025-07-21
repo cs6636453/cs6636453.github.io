@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="../form-echo.php" method="get">
+        <h1>Lab 3 ข้อ 1.1</h1>
+        <label>1. สาขาวิชา:</label>
+        <select name="dept">
+            <option value="">-- Please choose an option --</option>
+            <option value="CS">CS - วิทยาการคอมพิวเตอร์</option>
+            <option value="IC">IC</option>
+            <option value="MA">MA</option>
+            <option value="IMI">IMI</option>
+            <option value="AS">AS</option>
+            <option value="AFET">AFET</option>
+        </select>
+        <br>
+        <label>2. ยอดเงินที่จะโอน:</label>
+        <input
+                type="number"
+                name="pay_amount"
+                placeholder="กรุณาใส่ยอดเงิน (฿)"
+                min="0.01"
+                step="0.01"
+        >
+        <br>
+        <label>3. อาหารที่ชื่นชอบ 5 ชนิด (มากไปน้อย):</label>
+        <input type="text" name="food1" placeholder="อาหารที่ชอบมากที่สุด">
+        <input type="text" name="food2" placeholder="อาหารที่ชอบมาก">
+        <input type="text" name="food3" placeholder="อาหารที่ชอบปานกลาง">
+        <input type="text" name="food4" placeholder="อาหารที่ชอบน้อย">
+        <input type="text" name="food5" placeholder="อาหารที่ชอบน้อยที่สุด">
+        <br>
+        <label>4. ค่าไฟฟ้า 3 เดือนก่อนหน้า:</label>
+        <input type="number" name="elec_1m" placeholder="ค่าไฟฟ้า 1 เดือนก่อนหน้า (฿)" step="0.01">
+        <input type="number" name="elec_2m" placeholder="ค่าไฟฟ้า 2 เดือนก่อนหน้า (฿)" step="0.01">
+        <input type="number" name="elec_3m" placeholder="ค่าไฟฟ้า 3 เดือนก่อนหน้า (฿)" step="0.01">
+        <br>
+        <label>5. รหัสบัตรประชาชน:</label>
+        <input type="text" name="id_card" placeholder="รหัสบัตรประชาชน" pattern="[0-9]{13}" title="กรุณาใส่เลขบัตรประชาชนให้ครบ 13 หลัก">
+        <br>
+        <label>6. ความพึงพอใจของหนังสือเล่มนี้:</label>
+        <input type="radio" id="5" name="book_rating" value="5">
+        <label for="5">พึงพอใจมาก</label>
+        <input type="radio" id="4" name="book_rating" value="4">
+        <label for="4">พึงพอใจ</label>
+        <input type="radio" id="3" name="book_rating" value="3">
+        <label for="3">ปานกลาง</label>
+        <input type="radio" id="2" name="book_rating" value="2">
+        <label for="2">ไม่พึงพอใจ</label>
+        <input type="radio" id="1" name="book_rating" value="1">
+        <label for="1">ควรปรับปรุง</label>
+        <br>
+        <label>7. อาการป่วย</label>
+        <input type="text" name="symptoms" placeholder="กรอกอาการป่วยที่นี่">
+        <br>
+        <label>8. ในช่วง 3 เดือนที่ผ่านมา เคยรับวัคซีนหรือไม่</label>
+        <input type="radio" id="yes" name="vaccine" value="Yes">
+        <label for="yes">ใช่</label>
+        <input type="radio" id="no" name="vaccine" value="No">
+        <label for="no">ไม่</label>
+        <br>
+        <label>9. เวลาเริ่ม/สิ้นสุดการเรียน:</label>
+        <input type="time" name="start_lesson">
+        <input type="time" name="end_lesson">
+        <br>
+        <label>10. วัน/เวลาที่ต้องไปพบแพทย์</label>
+        <input type="datetime-local" name="appointment_hospital">
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
