@@ -15,17 +15,17 @@
         <fieldset>
             <legend>ข้อมูลทั่วไป</legend>
             <label>ชื่อ-สกุล:</label><br>
-            <input required="required" type="text" id="name_th" placeholder="กรอกชื่อ-สกุล"
+            <input required="required" type="text" name="name_th" placeholder="กรอกชื่อ-สกุล"
                    pattern="^[ก-๏\s]+$">*<br>
             <label>Email:</label><br>
-            <input required="required" type="email" id="email">*<br>
+            <input required="required" type="email" name="email">*<br>
             <label>เบอร์โทรศัพท์:</label><br>
-            <input required="required" type="tel" id="tele_no" value="+66"
+            <input required="required" type="tel" name="tele_no" value="+66"
                    pattern="+66[0-9]{8,9}">*<br>
             <label>ที่อยู่:</label><br>
-            <textarea id="address" rows="4" cols="40"></textarea><br>
+            <textarea name="address" rows="4" cols="40"></textarea><br>
             <label>รหัสไปรษณีย์:</label>
-            <input type="text" id="postal_code"
+            <input type="text" name="postal_code"
                    pattern="[0-9]{5}" size="5"><br>
             <label>รูปผู้จอง:</label>
             <input type="file" id="pfp" name="pfp" accept="image/*">
@@ -33,11 +33,11 @@
         <fieldset>
             <legend>ข้อมูลเข้าสู่ระบบ</legend>
             <label>Username:</label><br>
-            <input required="required" type="text" id="username"
+            <input required="required" type="text" name="username"
                    pattern="^[A-Za-z0-9_]{8,}$">
             <div class="hint">ประกอบด้วยตัวเลข ตัวอักษร หรือ _ ตั้งแต่ 8 ตัวขึ้นไป</div><br>
             <label>Password:</label><br>
-            <input required="required" type="password" id="password"
+            <input required="required" type="password" name="password"
                    pattern=".{8,}">
             <div class="hint">ประกอบด้วยอักขระอะไรก็ได้ 8 ตัวขึ้นไป</div>
         </fieldset>
@@ -53,21 +53,21 @@
                 <option value="lao">ลาว</option>
             </select><br>
             <label>วันที่เดินทาง:</label>
-            <input type="date" id="date_of_travel"><br>
+            <input type="date" name="date_of_travel"><br>
             <label>จำนวนผู้เดินทาง:</label>
-            <input type="number" id="passenger_count" size="3" min="1" max="10">
+            <input type="number" name="passenger_count" size="3" min="1" max="10">
             <label>เน้นการท่องเที่ยวแบบใด?</label><br>
-            <input type="checkbox" id="shopping" name="type_travel" value="Shopping">
+            <input type="checkbox" id="shopping" name="type_travel1" value="Shopping">
             <label for="shopping">ชอปปิ้ง</label><br>
-            <input type="checkbox" id="nature" name="type_travel" value="Nature">
+            <input type="checkbox" id="nature" name="type_travel2" value="Nature">
             <label for="nature">ธรรมชาติ</label><br>
-            <input type="checkbox" id="beach" name="type_travel" value="Beach">
+            <input type="checkbox" id="beach" name="type_travel3" value="Beach">
             <label for="beach">ทะเล</label><br>
         </fieldset>
         <label>ยอมรับเงื่อนไขและข้อตกลง</label>
-        <input type="radio" id="y" name="tc" value="y" checked="checked">
+        <input type="radio" id="y" name="tc" value="ยอมรับ" checked="checked">
         <label for="y">I agree</label>
-        <input type="radio" id="n" name="tc" value="n">
+        <input type="radio" id="n" name="tc" value="ปฏิเสธ">
         <label for="n">I disagree</label>
         <input type="submit" value="จอง">
     </form>
