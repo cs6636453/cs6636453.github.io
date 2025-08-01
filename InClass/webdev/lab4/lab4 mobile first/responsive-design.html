@@ -1,9 +1,74 @@
 <!DOCTYPE html>
 <html>
+
+<style>
+    div.content {
+        padding: 20px;
+        background-color: lightgray;
+    }
+    div.botton {
+        background-color: blue;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        border-radius: 10px;
+    }
+    .icon::before {
+        display: inline-block;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+    }
+    .botton::before {
+        font: var(--fa-font-solid);
+        content: '\f217';
+    }
+    a {
+        text-decoration: none;
+    }
+    div.product {
+        display: flex;
+        justify-content: center;
+    }
+    .flexible {
+        display: grid;
+        grid-template-areas:
+    'header header header header header header'
+    'menu main main main main right'
+    'footer footer footer footer footer footer';
+        gap: 10px;
+        background-color: white;
+        padding: 10px;
+    }
+    @media only screen and (max-width: 600px) {
+        .product {
+            grid-area: 1 / span 6;
+        }
+        .content {
+            grid-area: 2 / span 6;
+        }
+    }
+    @media only screen and (min-width: 600px) {
+        .product {
+            grid-area: 1 / span 2;
+        }
+        .content {
+            grid-area: 1 / span 4;
+        }
+        .botton {
+            display: inline-block;
+            width: auto;
+        }
+        .wrap {
+            text-align: center;
+        }
+    }
+</style>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="assets/css/solid.css" rel="stylesheet" />
 </head>
 
 <body>
